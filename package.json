@@ -14,7 +14,10 @@
     "styled-components": "^6.1.11",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://andrea-9977.github.io/portfolio",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
