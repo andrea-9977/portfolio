@@ -48,7 +48,7 @@ const Navbar = () => {
     <>
     <NavBar> 
         <FlexNav>
-          <NavContent smooth to="/myjourney" >My Journey</NavContent>
+          <NavContent smooth to="/#myjourney" >My Journey</NavContent>
           <NavContent smooth to="/#education">Education</NavContent>
           <NavContent to="/projects">Projects</NavContent>
           <NavContent to="/connect">Connect</NavContent>

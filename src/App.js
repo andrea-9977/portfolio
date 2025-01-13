@@ -5,7 +5,7 @@ import Education from './component/Education';
 import Projects from './component/Projects';
 import Navbar from './component/Navbar';
 import Work from './component/Work';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as  Router, Routes, Route, Navigate } from 'react-router-dom';
 import Connect from './component/Connect';
 
 const MainContainer=styled.div`
@@ -29,7 +29,8 @@ function App() {
 
         {/* Define routes for different pages */}
         <Routes>
-          <Route path="/myjourney" element={<Main />} />
+        <Route path="/" element={<Navigate to="/#myjourney" />} />
+          <Route path="/#myjourney" element={<Main />} />
           <Route path="/education" element={<Education/>} />
           <Route path="/projects" element={<Projects />} />
           <Route path = "/work" element={<Work/>}/>
