@@ -15,7 +15,7 @@ min-height: 100vh;
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
        
     <div className="App">
       {/* <MainContainer>
@@ -29,7 +29,8 @@ function App() {
 
         {/* Define routes for different pages */}
         <Routes>
-          <Route path="/main" element={<Main />} />
+        <Route path="/" element={<Navigate to="/#myjourney" />} />
+        <Route path="/#myjourney" element={<Main />} />
           <Route path="/education" element={<Education/>} />
           <Route path="/projects" element={<Projects />} />
           <Route path = "/work" element={<Work/>}/>
