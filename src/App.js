@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import Main from './page/Main';
+import styled from 'styled-components';
+import Education from './component/Education';
+import Projects from './component/Projects';
+import Navbar from './component/Navbar';
+import Work from './component/Work';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Connect from './component/Connect';
+
+const MainContainer=styled.div`
+// background-color: #ffffed;
+min-height: 100vh;
+`;
 
 function App() {
   return (
+    <Router>
+       
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <MainContainer>
+      <Navbar/>
+      <Main/>
+      <Education/>
+      </MainContainer> */}
+      <MainContainer>
+        {/* Navbar should always be visible */}
+        <Navbar />
+
+        {/* Define routes for different pages */}
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/education" element={<Education/>} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path = "/work" element={<Work/>}/>
+          <Route path = "/connect" element={<Connect/>}/>
+        </Routes>
+      </MainContainer>
     </div>
+    </Router>
   );
 }
 
