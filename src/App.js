@@ -29,7 +29,7 @@ function App() {
 
         {/* Define routes for different pages */}
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/myjourney" element={<Main />} />
           <Route path="/education" element={<Education/>} />
           <Route path="/projects" element={<Projects />} />
           <Route path = "/work" element={<Work/>}/>
