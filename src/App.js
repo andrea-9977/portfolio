@@ -15,8 +15,7 @@ min-height: 100vh;
 
 function App() {
   return (
-    <Router basename="/portfolio">
-       
+    <Router> 
     <div className="App">
       {/* <MainContainer>
       <Navbar/>
